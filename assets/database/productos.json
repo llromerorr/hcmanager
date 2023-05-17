@@ -1,0 +1,349 @@
+[
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Tinitón",
+    "unidadesPorPaquete": 6,
+    "precioCompra": 0.29,
+    "precioVenta": 0.38,
+    "sabores": [
+      "Mantecado y Chocolate",
+      "Mantecado y Fresa",
+      "Mantecado y Naranja",
+      "Chocolate y Fresa"
+    ]
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Sorbete",
+    "unidadesPorPaquete": 6,
+    "precioCompra": 0.29,
+    "precioVenta": 0.38,
+    "sabores": [
+      "Mango",
+      "Parchita",
+      "Guanábana",
+      "Tamarindo"
+    ]
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Batiboom",
+    "unidadesPorPaquete": 8,
+    "precioCompra": 0.29,
+    "precioVenta": 0.38,
+    "sabores": [
+      "Uva",
+      "Uva y fresa",
+      "Uva y Mantecado"
+    ]
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Barquilla",
+    "unidadesPorPaquete": 5,
+    "precioCompra": 0.35,
+    "precioVenta": 0.46,
+    "sabores": [
+      "Mantecado",
+      "Fresa",
+      "Chocolate"
+    ]
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Swing",
+    "unidadesPorPaquete": 6,
+    "precioCompra": 0.35,
+    "precioVenta": 0.46,
+    "sabores": []
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Sundae",
+    "unidadesPorPaquete": 6,
+    "precioCompra": 0.32,
+    "precioVenta": 0.42,
+    "sabores": [
+      "Sundae de Chocolate",
+      "Sundae de Fresa",
+      "Sundae de Naranja"
+    ]
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Doble Chocolate",
+    "unidadesPorPaquete": 6,
+    "precioCompra": 0.32,
+    "precioVenta": 0.42,
+    "sabores": []
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "Clasico",
+    "producto": "Zoek",
+    "unidadesPorPaquete": 5,
+    "precioCompra": 0.35,
+    "precioVenta": 0.45,
+    "sabores": []
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "Crocante",
+    "producto": "Zoek",
+    "unidadesPorPaquete": 5,
+    "precioCompra": 0.365,
+    "precioVenta": 0.46,
+    "sabores": []
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Clasico",
+    "producto": "Medio Litro",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 1.2,
+    "precioVenta": 1.5,
+    "sabores": [
+      "Mantecado",
+      "Fresa",
+      "Mantecado y Chocolate",
+      "Mantecado y Fresa",
+      "Mantecado y Naranja",
+      "Chocolate y Fresa"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Premium",
+    "producto": "Medio Litro",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 1.4,
+    "precioVenta": 1.8,
+    "sabores": [
+      "Chocolate",
+      "Galleta de Chocolate",
+      "Brownie",
+      "Torta Suiza",
+      "Ron con Pasas",
+      "Café",
+      "Dulce de Leche",
+      "Stracciatella"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Clasico",
+    "producto": "Litro",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 2.0,
+    "precioVenta": 2.5,
+    "sabores": [
+      "Mantecado",
+      "Fresa",
+      "Mantecado y Chocolate",
+      "Mantecado y Fresa",
+      "Mantecado y Naranja",
+      "Chocolate y Fresa"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Premium",
+    "producto": "Litro",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 2.3,
+    "precioVenta": 2.9,
+    "sabores": [
+      "Chocolate",
+      "Café",
+      "Galleta de Chocolate",
+      "Brownie",
+      "Coco",
+      "Torta Suiza",
+      "Ron con Pasas",
+      "Sundae de Fresa",
+      "Fresa con Sirope de Fresa",
+      "Sundae de Chocolate"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Napolitano",
+    "producto": "Napolitano",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 4.4,
+    "precioVenta": 6,
+    "sabores": []
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Clasico",
+    "producto": "4.4 Litros",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 7.5,
+    "precioVenta": 9.0,
+    "sabores": [
+      "Mantecado",
+      "Fresa",
+      "Naranja",
+      "Uva",
+      "Frambuesa",
+      "Chicle",
+      "Limón"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Premium",
+    "producto": "4.4 Litros",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 8.2,
+    "precioVenta": 10.0,
+    "sabores": [
+      "Chocolate",
+      "Coco",
+      "Café",
+      "Torta Suiza",
+      "Ron con Frutas",
+      "Sundae de Fresa",
+      "Sundae de Chocolate",
+      "Fresa con Sirope de Fresa",
+      "Tornado"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Extra",
+    "producto": "4.4 Litros",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 8.8,
+    "precioVenta": 10.5,
+    "sabores": [
+      "Mantechip",
+      "Chocochip",
+      "Chocomani",
+      "Galleta de Chocolate",
+      "Dulce de Leche",
+      "Maní"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Super",
+    "producto": "4.4 Litros",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 9.7,
+    "precioVenta": 11.5,
+    "sabores": [
+      "Stracciatella",
+      "Brownie",
+      "Choco Brownie",
+      "Ron con Pasas"
+    ]
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Cucharilla",
+    "unidadesPorPaquete": 100,
+    "precioCompra": 0.01,
+    "precioVenta": 0.02,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Afiche Publicitario",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 0,
+    "precioVenta": 0,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Envase 4.4L",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 3,
+    "precioVenta": 3,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Bolso Térmico",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 12,
+    "precioVenta": 15,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "Fresa",
+    "producto": "Sirope",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 2.45,
+    "precioVenta": 4,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "Chocolate",
+    "producto": "Sirope",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 2.45,
+    "precioVenta": 4,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "Dulce de Leche",
+    "producto": "Sirope",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 6,
+    "precioVenta": 8,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "Capita Magica",
+    "producto": "Sirope",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 9,
+    "precioVenta": 12,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Galleta de Barquilla Tradicional",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 0.1,
+    "precioVenta": 0.12,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Galleta de Mini Barquillón",
+    "unidadesPorPaquete": 45,
+    "precioCompra": 0.155555556,
+    "precioVenta": 0.177777778,
+    "sabores": []
+  },
+  {
+    "categoria": "Otros",
+    "tipo": "",
+    "producto": "Cesta de Galleta",
+    "unidadesPorPaquete": 32,
+    "precioCompra": 0.21875,
+    "precioVenta": 0.25,
+    "sabores": []
+  }  
+]
