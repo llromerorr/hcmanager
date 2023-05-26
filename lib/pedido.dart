@@ -20,14 +20,17 @@ class PedidoState extends State<Pedido> {
           itemCount: globals.pedidos[globals.pedidoActual]!.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(index.toString()),
+              leading: Text("${globals.pedidos[globals.pedidoActual]!.elementAt(index).cantidad}"),
+              title: Text("${globals.pedidos[globals.pedidoActual]!.elementAt(index).producto} ${globals.pedidos[globals.pedidoActual]!.elementAt(index).sabor}"),
+              trailing: Text("${(globals.pedidos[globals.pedidoActual]!.elementAt(index).precioVenta * globals.pedidos[globals.pedidoActual]!.elementAt(index).cantidad * globals.pedidos[globals.pedidoActual]!.elementAt(index).unidadesPorPaquete).toStringAsFixed(2)}\$"),
             );
           },
         ),
         floatingActionButton: FloatingActionButton.extended(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Productos()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Productos())).then((value){setState(() {
+                
+              });});
             },
             label: const Text('Agregar producto')));
   }
