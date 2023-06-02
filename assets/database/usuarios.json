@@ -1,7 +1,17 @@
-{
-    "26729561": {
+[
+    {
         "nombre": "Luis Romero",
         "cedula": "26729561",
         "telefono": "0414-5943513"
+    },
+    {
+        "nombre": "Fabiola Romero",
+        "cedula": "14248563",
+        "telefono": "0414-4253624"
+    },
+    {
+        "nombre": "Carlos L. Mendez",
+        "cedula": "28330896",
+        "telefono": "0414-4587369"
     }
-}
+]

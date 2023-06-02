@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pedidos/pedido.dart';
+import 'package:pedidos/usuarios.dart';
 import 'globals.dart' as globals;
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData.dark(),
-    home: const MainApp(),
+    home: const Usuarios(),
   ));
 }
 
@@ -21,23 +23,84 @@ class MainAppState extends State<MainApp> {
 
   @override
   void initState() {
-    globals.cargarProductos();
     super.initState();
   }
+
+  double montoTotal(){
+    double total = 0;
+
+    for (var pedido in globals.pedidos.values) {
+      for (var entrada in pedido) {
+        if(entrada.producto != "delivery" && entrada.tipo != "delivery"){
+          total += entrada.precioVenta * entrada.cantidad * entrada.unidadesPorPaquete;
+        }
+      }
+    }
+
+    return total;
+  }
+
+  double montoTotalConDelivery(){
+    double total = 0;
+
+    for (var pedido in globals.pedidos.values) {
+      for (var entrada in pedido) {
+        total += entrada.precioVenta * entrada.cantidad * entrada.unidadesPorPaquete;
+      }
+    }
+
+    return total;
+  }
+
+  double empresaTotal(){
+    double total = 0;
+
+    for (var pedido in globals.pedidos.values) {
+      for (var entrada in pedido) {
+        if(entrada.producto != "delivery" && entrada.tipo != "delivery"){
+          total += entrada.precioCompra * entrada.cantidad * entrada.unidadesPorPaquete;
+        }
+      }
+    }
+
+    return total;
+  }
+
+  double deliveryTotal(){
+    double total = 0;
+
+    for (var pedido in globals.pedidos.values) {
+      for (var entrada in pedido) {
+        if(entrada.producto == "delivery" && entrada.tipo == "delivery"){
+          total = entrada.precioVenta;
+        }
+      }
+    }
+
+    return total;
+  }
+
+  double gananciaTotal() => montoTotal() - empresaTotal();
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Helados Carabobo"),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text("Helados Carabobo"),
+              Text(globals.usuario_nombre, style: const TextStyle(fontSize: 14)),
+            ],
+          )
         ),
         body: ListView.builder(
           itemBuilder: (context, index) {
             return ListTile(
               onTap: () {
                 globals.pedidoActual = globals.pedidos.keys.elementAt(index);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Pedido()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Pedido())).then((value){setState(() {});});
               },
               onLongPress: () {
                 showDialog(
@@ -45,13 +108,11 @@ class MainAppState extends State<MainApp> {
                   builder: (BuildContext context) {
                     return AlertDialog(
                       title: const Text('Eliminar pedido'),
-                      content: Text(
-                          "¿desea eliminar el pedido de ${globals.pedidos.keys.elementAt(index)}?"),
+                      content: Text("¿desea eliminar el pedido de ${globals.pedidos.keys.elementAt(index)}?"),
                       actions: <Widget>[
                         ElevatedButton(
                           onPressed: () {
-                            globals.pedidos
-                                .remove(globals.pedidos.keys.elementAt(index));
+                            globals.pedidos.remove(globals.pedidos.keys.elementAt(index));
                             Navigator.of(context).pop();
                             setState(() {}); // Actualizar la lista de pedidos
                           },
@@ -74,7 +135,85 @@ class MainAppState extends State<MainApp> {
           },
           itemCount: globals.pedidos.length,
         ),
+
+        bottomNavigationBar: Container(
+          height: 55,
+          decoration: const BoxDecoration(
+            color: Colors.pink,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 4,
+                color: Colors.black,
+              )
+            ]
+          ),
+
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Material(
+              color: Colors.transparent,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+            
+                children: [    
+                  // Ganancia
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Text('Ganancia', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                      Text('${gananciaTotal().toStringAsFixed(2)}\$', style: const TextStyle(fontSize: 14))
+                    ],
+                  ),
+
+                  // Empresa
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Text('Empresa', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                      Text('${empresaTotal().toStringAsFixed(2)}\$', style: const TextStyle(fontSize: 14))
+                    ],
+                  ),
+
+                  // Total
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Text('Delivery', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                      Text('${deliveryTotal().toStringAsFixed(2)}\$', style: const TextStyle(fontSize: 14))
+                    ],
+                  ),
+                  
+                  // Pedidos
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Text('Pedidos', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                      Text('${montoTotal().toStringAsFixed(2)}\$', style: const TextStyle(fontSize: 14))
+                    ],
+                  ),
+
+                  // Total
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Text('Total', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                      Text('${montoTotalConDelivery().toStringAsFixed(2)}\$', style: const TextStyle(fontSize: 14))
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+
         floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: Colors.pink,
             onPressed: () {
               showDialog(
                 context: context,
@@ -92,18 +231,22 @@ class MainAppState extends State<MainApp> {
                           labelText: 'Nombre del cliente',
                         ),
                         onFieldSubmitted: (value) {
-                          globals.pedidos.addAll({_nombreController.text: []});
-                          _nombreController.clear();
-                          Navigator.of(context).pop();
-                          setState(() {}); // Actualizar la lista de pedidos
+                          if(_nombreController.text != ""){
+                            globals.pedidos.addAll({_nombreController.text: []});
+                            _nombreController.clear();
+                            Navigator.of(context).pop();
+                            setState(() {}); // Actualizar la lista de pedidos
+                          }
                         }),
                     actions: <Widget>[
                       ElevatedButton(
                         onPressed: () {
-                          globals.pedidos.addAll({_nombreController.text: []});
-                          _nombreController.clear();
-                          Navigator.of(context).pop();
-                          setState(() {}); // Actualizar la lista de pedidos
+                          if(_nombreController.text != ""){
+                            globals.pedidos.addAll({_nombreController.text: []});
+                            _nombreController.clear();
+                            Navigator.of(context).pop();
+                            setState(() {}); // Actualizar la lista de pedidos
+                          }
                         },
                         child: const Text('Aceptar'),
                       ),
@@ -112,6 +255,6 @@ class MainAppState extends State<MainApp> {
                 },
               );
             },
-            label: const Text('Agregar pedido')));
+            label: const Text('Agregar pedido', style: TextStyle(color: Colors.white))));
   }
 }

@@ -11,8 +11,7 @@ class Productos extends StatefulWidget {
   ProductosState createState() => ProductosState();
 }
 
-class ProductosState extends State<Productos>
-    with SingleTickerProviderStateMixin {
+class ProductosState extends State<Productos> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   List<Tab> tabs = [];
@@ -46,6 +45,45 @@ class ProductosState extends State<Productos>
     // inicializar secciones
     for (String categoria in categorias) {
       secciones.add(_buildProductosPorCategoria(categoria));
+    }
+  }
+
+
+  void agregarProductoSinSaborAlPedido(Producto producto, int cantidad){
+    int indice = -1;
+
+    for(int i = 0; i < globals.pedidos[globals.pedidoActual]!.length; i++){
+      if(globals.pedidos[globals.pedidoActual]!.elementAt(i).producto == producto.producto && globals.pedidos[globals.pedidoActual]!.elementAt(i).tipo == producto.tipo){
+        indice = i;
+      }
+    }
+
+    // ES UN NUEVO PRODUCTO
+    if(indice == -1){
+      globals.pedidos[globals.pedidoActual]!.add(Entrada(
+        producto: producto.producto,
+        cantidad: cantidad,
+        categoria: producto.categoria,
+        precioCompra: producto.precioCompra,
+        precioVenta: producto.precioVenta,
+        sabor: "",
+        tipo: producto.tipo,
+        unidadesPorPaquete: producto.unidadesPorPaquete)
+      );
+    } 
+    
+    // EL PRODUCTO YA EXISTER CON EL MISMO SABOR SE PROCEDE A REESCRIBIR
+    else {
+      globals.pedidos[globals.pedidoActual]![indice] = Entrada(
+        producto: producto.producto,
+        cantidad: cantidad,
+        categoria: producto.categoria,
+        precioCompra: producto.precioCompra,
+        precioVenta: producto.precioVenta,
+        sabor: "",
+        tipo: producto.tipo,
+        unidadesPorPaquete: producto.unidadesPorPaquete
+      );
     }
   }
 
@@ -194,6 +232,48 @@ class ProductosState extends State<Productos>
                         ),
                       ),
                     ),
+                  );
+                },
+              );
+            }
+            
+            else {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  // obetener el foco para el textformfield
+                  final focusNode = FocusNode();
+                  focusNode.requestFocus();
+
+                  return AlertDialog(
+                    title: Text(productosEnCategoria[index].unidadesPorPaquete == 1 ? "Unidades" : "Paquetes"),
+                    content: TextFormField(
+                        focusNode: focusNode,
+                        controller: _cantidadController,
+                        keyboardType: TextInputType.number,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly
+                        ],
+                        decoration: const InputDecoration(labelText: 'Cantidad'),
+                        onFieldSubmitted: (value) {
+                          agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(_cantidadController.text));
+                          _cantidadController.clear();
+                          Navigator.of(context).pop();
+                          Navigator.of(context).pop();
+                          setState(() {}); // Actualizar la lista de pedidos
+                        }),
+                    actions: <Widget>[
+                      ElevatedButton(
+                        onPressed: () {
+                          agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(_cantidadController.text));
+                          _cantidadController.clear();
+                          Navigator.of(context).pop();
+                          Navigator.of(context).pop();
+                          setState(() {}); // Actualizar la lista de pedidos
+                        },
+                        child: const Text('Aceptar'),
+                      ),
+                    ],
                   );
                 },
               );
