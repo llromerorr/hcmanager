@@ -4,7 +4,7 @@
     "tipo": "",
     "producto": "Tinitón",
     "unidadesPorPaquete": 6,
-    "precioCompra": 0.29,
+    "precioCompra": 0.26,
     "precioVenta": 0.38,
     "sabores": [
       "Mantecado y Chocolate",
@@ -18,7 +18,7 @@
     "tipo": "",
     "producto": "Sorbete",
     "unidadesPorPaquete": 6,
-    "precioCompra": 0.29,
+    "precioCompra": 0.30,
     "precioVenta": 0.38,
     "sabores": [
       "Mango",
@@ -32,7 +32,7 @@
     "tipo": "",
     "producto": "Batiboom",
     "unidadesPorPaquete": 8,
-    "precioCompra": 0.29,
+    "precioCompra": 0.25,
     "precioVenta": 0.38,
     "sabores": [
       "Uva",
@@ -67,7 +67,7 @@
     "tipo": "",
     "producto": "Sundae",
     "unidadesPorPaquete": 6,
-    "precioCompra": 0.32,
+    "precioCompra": 0.30,
     "precioVenta": 0.42,
     "sabores": [
       "Sundae de Chocolate",
@@ -89,8 +89,8 @@
     "tipo": "Clasico",
     "producto": "Zoek",
     "unidadesPorPaquete": 5,
-    "precioCompra": 0.35,
-    "precioVenta": 0.45,
+    "precioCompra": 0.30,
+    "precioVenta": 0.48,
     "sabores": []
   },
   {
@@ -98,8 +98,8 @@
     "tipo": "Crocante",
     "producto": "Zoek",
     "unidadesPorPaquete": 5,
-    "precioCompra": 0.365,
-    "precioVenta": 0.46,
+    "precioCompra": 0.34,
+    "precioVenta": 0.48,
     "sabores": []
   },
   {
@@ -130,10 +130,7 @@
       "Galleta de Chocolate",
       "Brownie",
       "Torta Suiza",
-      "Ron con Pasas",
-      "Café",
-      "Dulce de Leche",
-      "Stracciatella"
+      "Ron con Pasas"
     ]
   },
   {
@@ -161,14 +158,19 @@
     "precioVenta": 2.9,
     "sabores": [
       "Chocolate",
+      "Choco Brownie",
       "Café",
       "Galleta de Chocolate",
       "Brownie",
       "Coco",
       "Torta Suiza",
       "Ron con Pasas",
+      "Stracciatella",
+      "Dulce de Leche",
       "Sundae de Fresa",
+      "Sundae de Naranja",
       "Fresa con Sirope de Fresa",
+      "Chocolate con Sirop Chocolate",
       "Sundae de Chocolate"
     ]
   },
@@ -178,7 +180,7 @@
     "producto": "Napolitano",
     "unidadesPorPaquete": 1,
     "precioCompra": 4.4,
-    "precioVenta": 6,
+    "precioVenta": 5.5,
     "sabores": []
   },
   {
@@ -186,7 +188,7 @@
     "tipo": "Clasico",
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
-    "precioCompra": 7.5,
+    "precioCompra": 6.75,
     "precioVenta": 9.0,
     "sabores": [
       "Mantecado",
@@ -195,7 +197,8 @@
       "Uva",
       "Frambuesa",
       "Chicle",
-      "Limón"
+      "Limón",
+      "Parchita"
     ]
   },
   {
@@ -203,17 +206,16 @@
     "tipo": "Premium",
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
-    "precioCompra": 8.2,
+    "precioCompra": 7.4,
     "precioVenta": 10.0,
     "sabores": [
       "Chocolate",
       "Coco",
-      "Café",
       "Torta Suiza",
       "Ron con Frutas",
-      "Sundae de Fresa",
       "Sundae de Chocolate",
-      "Fresa con Sirope de Fresa",
+      "Sundae de Naranja",
+      "Chocolate con Sirop Chocolate",
       "Tornado"
     ]
   },
@@ -222,14 +224,16 @@
     "tipo": "Extra",
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
-    "precioCompra": 8.8,
+    "precioCompra": 7.9,
     "precioVenta": 10.5,
     "sabores": [
       "Mantechip",
       "Chocochip",
       "Chocomani",
       "Galleta de Chocolate",
-      "Dulce de Leche",
+      "Sundae de Fresa",
+      "Fresa con Sirope de Fresa",
+      "Café",
       "Maní"
     ]
   },
@@ -238,13 +242,14 @@
     "tipo": "Super",
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
-    "precioCompra": 9.7,
+    "precioCompra": 8.75,
     "precioVenta": 11.5,
     "sabores": [
       "Stracciatella",
       "Brownie",
       "Choco Brownie",
-      "Ron con Pasas"
+      "Ron con Pasas",
+      "Dulce de Leche"
     ]
   },
   {
@@ -323,9 +328,9 @@
     "categoria": "Otros",
     "tipo": "",
     "producto": "Galleta de Barquilla Tradicional",
-    "unidadesPorPaquete": 1,
-    "precioCompra": 0.1,
-    "precioVenta": 0.12,
+    "unidadesPorPaquete": 50,
+    "precioCompra": 6.5,
+    "precioVenta": 8,
     "sabores": []
   },
   {
@@ -333,17 +338,17 @@
     "tipo": "",
     "producto": "Galleta de Mini Barquillón",
     "unidadesPorPaquete": 45,
-    "precioCompra": 0.155555556,
-    "precioVenta": 0.177777778,
+    "precioCompra": 14.2965,
+    "precioVenta": 16.3,
     "sabores": []
   },
   {
     "categoria": "Otros",
     "tipo": "",
     "producto": "Cesta de Galleta",
-    "unidadesPorPaquete": 32,
-    "precioCompra": 0.21875,
-    "precioVenta": 0.25,
+    "unidadesPorPaquete": 56,
+    "precioCompra": 16.8952,
+    "precioVenta": 19.38,
     "sabores": []
   }  
 ]

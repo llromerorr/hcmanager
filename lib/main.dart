@@ -72,7 +72,7 @@ class MainAppState extends State<MainApp> {
     for (var pedido in globals.pedidos.values) {
       for (var entrada in pedido) {
         if(entrada.producto == "delivery" && entrada.tipo == "delivery"){
-          total = entrada.precioVenta;
+          total += entrada.precioVenta;
         }
       }
     }
