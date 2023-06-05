@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pedidos/pedido.dart';
+import 'package:pedidos/types/entrada.dart';
 import 'package:pedidos/usuarios.dart';
 import 'globals.dart' as globals;
 
@@ -80,6 +81,43 @@ class MainAppState extends State<MainApp> {
     return total;
   }
 
+  List<Entrada> productosTotales(){
+    
+    List<Entrada> totales = [];
+
+    for (var pedido in globals.pedidos.values) {
+      for (var entrada in pedido) {
+        bool existe = false;
+        
+        // identificar si la entrada ya existe y sumar cantidades
+        for (Entrada element in totales) {
+ 
+          //si la entrada existe sumar cantidades
+          if(element.producto == entrada.producto && element.tipo == entrada.tipo && element.sabor == entrada.sabor){
+            element.cantidad += entrada.cantidad;
+            existe = true;
+          }
+        }
+
+        // Crear entrada que no existe
+        if(!existe){
+          totales.add(Entrada(
+            producto: entrada.producto,
+            cantidad: entrada.cantidad,
+            categoria: entrada.categoria,
+            precioCompra: entrada.precioCompra,
+            precioVenta: entrada.precioVenta,
+            sabor: entrada.sabor,
+            tipo: entrada.tipo,
+            unidadesPorPaquete: entrada.unidadesPorPaquete
+          ));
+        }
+      }
+    }
+    
+    return totales;
+  }
+
   double gananciaTotal() => montoTotal() - empresaTotal();
 
 
@@ -87,6 +125,64 @@ class MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [
+            IconButton(
+              onPressed: (){
+                
+                List<Entrada> totales = productosTotales();
+                int indiceProductoPedido = 0;
+
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Scaffold(
+                      appBar: AppBar(
+                        title: const Text("Pedido a la empresa"),
+                        elevation: 0,
+                      ),
+                      body: Container(
+                        // color: Colors.white,
+                        padding: const EdgeInsets.all(10),
+                        width: double.infinity,
+                        child: Column(
+                          children: [
+                            Text("Total a pagar en la empresa: ${empresaTotal().toStringAsFixed(2)}\$"),
+                            const Divider(),
+                            Expanded(
+                              child: ListView.builder(
+                                itemCount: totales.length,
+                                itemBuilder: (context, index){
+
+                                  Widget item = const SizedBox();
+                                  
+                                  if(totales[index].producto != "delivery" && totales[index].tipo != "delivery"){
+                                    indiceProductoPedido += 1;
+
+                                    item = Container(
+                                      height: 22,
+                                      child: Row(
+                                        children: [
+                                          Expanded(child: Text("$indiceProductoPedido. ${totales[index].producto}${totales[index].tipo == "" ? "" : " "}${totales[index].tipo}${totales[index].sabor == "" ? "" : " "}${totales[index].sabor}".replaceAll('Medio Litro', '1/2L').replaceAll('Napolitano Napolitano', 'Napolitano').replaceAll('4.4 Litros', '4.4L').replaceAll('Litro', '1L').replaceAll('Fresa con Sirope de Fresa', 'Fresa y Sirop Fresa').replaceAll('Galleta de Chocolate', 'Galleta Chocolate'))),
+                                          Text((totales[index].cantidad * totales[index].unidadesPorPaquete).toString()),
+                                        ],
+                                      ),
+                                    );
+                                  }
+
+                                  return item;
+                                }
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+                    );
+                  },
+                );
+              },
+              icon: const Icon(Icons.list_alt_rounded)
+            ),
+          ],
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
