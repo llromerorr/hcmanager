@@ -328,16 +328,16 @@
     "categoria": "Otros",
     "tipo": "",
     "producto": "Galleta de Barquilla Tradicional",
-    "unidadesPorPaquete": 50,
-    "precioCompra": 6.5,
-    "precioVenta": 8,
+    "unidadesPorPaquete": 1,
+    "precioCompra": 5,
+    "precioVenta": 6,
     "sabores": []
   },
   {
     "categoria": "Otros",
     "tipo": "",
     "producto": "Galleta de Mini Barquillón",
-    "unidadesPorPaquete": 45,
+    "unidadesPorPaquete": 1,
     "precioCompra": 14.2965,
     "precioVenta": 16.3,
     "sabores": []
@@ -346,7 +346,7 @@
     "categoria": "Otros",
     "tipo": "",
     "producto": "Cesta de Galleta",
-    "unidadesPorPaquete": 56,
+    "unidadesPorPaquete": 1,
     "precioCompra": 16.8952,
     "precioVenta": 19.38,
     "sabores": []
