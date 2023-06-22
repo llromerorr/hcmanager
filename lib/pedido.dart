@@ -273,6 +273,33 @@ class PedidoState extends State<Pedido> {
                 leading: Text("${globals.pedidos[globals.pedidoActual]!.elementAt(index).cantidad}"),
                 title: Text("${globals.pedidos[globals.pedidoActual]!.elementAt(index).producto}${globals.pedidos[globals.pedidoActual]!.elementAt(index).tipo == "" ? "" : " "}${globals.pedidos[globals.pedidoActual]!.elementAt(index).tipo}${globals.pedidos[globals.pedidoActual]!.elementAt(index).sabor == "" ? "" : " "}${globals.pedidos[globals.pedidoActual]!.elementAt(index).sabor}"),
                 trailing: Text("${(globals.pedidos[globals.pedidoActual]!.elementAt(index).precioVenta * globals.pedidos[globals.pedidoActual]!.elementAt(index).cantidad * globals.pedidos[globals.pedidoActual]!.elementAt(index).unidadesPorPaquete).toStringAsFixed(2)}\$"),
+                onLongPress: (){
+
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('¿Eliminar producto?'),
+                        content: Text("${globals.pedidos[globals.pedidoActual]!.elementAt(index).producto}${globals.pedidos[globals.pedidoActual]!.elementAt(index).tipo == "" ? "" : " "}${globals.pedidos[globals.pedidoActual]!.elementAt(index).tipo}${globals.pedidos[globals.pedidoActual]!.elementAt(index).sabor == "" ? "" : " "}${globals.pedidos[globals.pedidoActual]!.elementAt(index).sabor}"),
+                        actions: <Widget>[
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                globals.pedidos[globals.pedidoActual]!.removeAt(index);  
+                              });
+
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text('Aceptar'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+
+
+                  
+                },
               );
             }
 
