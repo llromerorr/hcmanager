@@ -19,6 +19,6 @@ flutter:
   uses-material-design: true
 
 assets:
-  - database/usuarios.json
+  - assets/database/usuarios.json
   - database/*
   - img/*

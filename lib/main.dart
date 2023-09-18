@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:pedidos/pedido.dart';
 import 'package:pedidos/types/entrada.dart';
 import 'package:pedidos/usuarios.dart';
@@ -8,7 +7,7 @@ import 'globals.dart' as globals;
 void main() {
   runApp(MaterialApp(
     theme: ThemeData.dark(),
-    home: const Usuarios(),
+    home: const MainApp(),
   ));
 }
 
@@ -158,7 +157,7 @@ class MainAppState extends State<MainApp> {
                                   if(totales[index].producto != "delivery" && totales[index].tipo != "delivery"){
                                     indiceProductoPedido += 1;
 
-                                    item = Container(
+                                    item = SizedBox(
                                       height: 22,
                                       child: Row(
                                         children: [

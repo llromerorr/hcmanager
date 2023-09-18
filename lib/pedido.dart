@@ -353,7 +353,7 @@ class PedidoState extends State<Pedido> {
                         context: context,
                         builder: (BuildContext context) {
                           // obetener el foco para el textformfield
-                          final TextEditingController _cantidadController = TextEditingController();
+                          final TextEditingController cantidadController = TextEditingController();
                           final focusNode = FocusNode();
                           focusNode.requestFocus();
 
@@ -361,7 +361,7 @@ class PedidoState extends State<Pedido> {
                             title: const Text("Delivery"),
                             content: TextFormField(
                                 focusNode: focusNode,
-                                controller: _cantidadController,
+                                controller: cantidadController,
                                 keyboardType: TextInputType.number,
                                 inputFormatters: [
                                   FilteringTextInputFormatter.digitsOnly
@@ -369,8 +369,8 @@ class PedidoState extends State<Pedido> {
                                 
                                 decoration: const InputDecoration(labelText: 'Costo'),
                                 onFieldSubmitted: (value) {
-                                  agregarDelivery(int.parse(_cantidadController.text).toDouble());
-                                  _cantidadController.clear();
+                                  agregarDelivery(int.parse(cantidadController.text).toDouble());
+                                  cantidadController.clear();
                                   Navigator.of(context).pop();
                                   setState(() {}); // Actualizar la lista de pedidos
                                 }),
@@ -378,8 +378,8 @@ class PedidoState extends State<Pedido> {
                             actions: <Widget>[
                               ElevatedButton(
                                 onPressed: () {
-                                  agregarDelivery(int.parse(_cantidadController.text).toDouble());
-                                  _cantidadController.clear();
+                                  agregarDelivery(int.parse(cantidadController.text).toDouble());
+                                  cantidadController.clear();
                                   Navigator.of(context).pop();
                                   setState(() {}); // Actualizar la lista de pedidos
                                 },

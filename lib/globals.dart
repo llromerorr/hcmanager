@@ -61,7 +61,7 @@ Future<void> cargarProductos(int index) async {
 }
 
 Future<void> cargarUsuarios() async {
-  String jsonString = await rootBundle.loadString('database/usuarios.json');
+  String jsonString = await rootBundle.loadString('assets/database/usuarios.json');
   List<dynamic> usuariosJson = json.decode(jsonString);
 
   for (var i = 0; i < usuariosJson.length; i++) {

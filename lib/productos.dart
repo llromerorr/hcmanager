@@ -143,7 +143,7 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
   Widget _buildProductosPorCategoria(String categoria) {
     // productos que pertenecen a la categoria
     List<Producto> productosEnCategoria = [];
-    final TextEditingController _cantidadController = TextEditingController();
+    final TextEditingController cantidadController = TextEditingController();
     int saborIndex = 0;
 
     // filtrar por categoria
@@ -191,15 +191,15 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                                   title: Text(productosEnCategoria[index].unidadesPorPaquete == 1 ? "Unidades" : "Paquetes"),
                                   content: TextFormField(
                                       focusNode: focusNode,
-                                      controller: _cantidadController,
+                                      controller: cantidadController,
                                       keyboardType: TextInputType.number,
                                       inputFormatters: [
                                         FilteringTextInputFormatter.digitsOnly
                                       ],
                                       decoration: const InputDecoration(labelText: 'Cantidad'),
                                       onFieldSubmitted: (value) {
-                                        agregarProductoAlPedido(productosEnCategoria[index], int.parse(_cantidadController.text), i);
-                                        _cantidadController.clear();
+                                        agregarProductoAlPedido(productosEnCategoria[index], int.parse(cantidadController.text), i);
+                                        cantidadController.clear();
                                         Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         Navigator.of(context).pop();
@@ -208,8 +208,8 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                                   actions: <Widget>[
                                     ElevatedButton(
                                       onPressed: () {
-                                        agregarProductoAlPedido(productosEnCategoria[index], int.parse(_cantidadController.text), i);
-                                        _cantidadController.clear();
+                                        agregarProductoAlPedido(productosEnCategoria[index], int.parse(cantidadController.text), i);
+                                        cantidadController.clear();
                                         Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         Navigator.of(context).pop();
@@ -249,15 +249,15 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                     title: Text(productosEnCategoria[index].unidadesPorPaquete == 1 ? "Unidades" : "Paquetes"),
                     content: TextFormField(
                         focusNode: focusNode,
-                        controller: _cantidadController,
+                        controller: cantidadController,
                         keyboardType: TextInputType.number,
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly
                         ],
                         decoration: const InputDecoration(labelText: 'Cantidad'),
                         onFieldSubmitted: (value) {
-                          agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(_cantidadController.text));
-                          _cantidadController.clear();
+                          agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(cantidadController.text));
+                          cantidadController.clear();
                           Navigator.of(context).pop();
                           Navigator.of(context).pop();
                           setState(() {}); // Actualizar la lista de pedidos
@@ -265,8 +265,8 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                     actions: <Widget>[
                       ElevatedButton(
                         onPressed: () {
-                          agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(_cantidadController.text));
-                          _cantidadController.clear();
+                          agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(cantidadController.text));
+                          cantidadController.clear();
                           Navigator.of(context).pop();
                           Navigator.of(context).pop();
                           setState(() {}); // Actualizar la lista de pedidos

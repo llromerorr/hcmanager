@@ -45,7 +45,7 @@
     "tipo": "",
     "producto": "Barquilla",
     "unidadesPorPaquete": 5,
-    "precioCompra": 0.35,
+    "precioCompra": 0.37,
     "precioVenta": 0.46,
     "sabores": [
       "Mantecado",
@@ -89,7 +89,7 @@
     "tipo": "Clasico",
     "producto": "Zoek",
     "unidadesPorPaquete": 5,
-    "precioCompra": 0.30,
+    "precioCompra": 0.36,
     "precioVenta": 0.48,
     "sabores": []
   },
@@ -98,7 +98,7 @@
     "tipo": "Crocante",
     "producto": "Zoek",
     "unidadesPorPaquete": 5,
-    "precioCompra": 0.34,
+    "precioCompra": 0.40,
     "precioVenta": 0.48,
     "sabores": []
   },
