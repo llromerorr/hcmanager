@@ -7,7 +7,7 @@ import 'globals.dart' as globals;
 void main() {
   runApp(MaterialApp(
     theme: ThemeData.dark(),
-    home: const MainApp(),
+    home: const Usuarios(),
   ));
 }
 

@@ -46,11 +46,11 @@ class _UsuariosState extends State<Usuarios> {
                             Container(
                               width: 80,
                               height: 80,
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                color: Colors.blue
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.all(Radius.circular(20)),
+                                color: globals.usuarios[index]["cedula"]!.contains("usd") ? Colors.green : Colors.blue 
                               ),
-                              child: Center(child: Text(globals.usuarios[index]["nombre"]!.substring(0, 1), style: const TextStyle(fontSize: 30)))
+                              child: Center(child: Text((globals.usuarios[index]["cedula"]!.contains("usd") ? "\$" : "Bs."), style: const TextStyle(fontSize: 30))),
                             ),
                       
                             const Divider(

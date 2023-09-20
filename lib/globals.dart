@@ -36,7 +36,7 @@ Future<void> cargarProductos(int index) async {
   usuario_cedula = usuarios[index]["cedula"]!;
   usuario_telefono = usuarios[index]["telefono"]!;
 
-  String jsonString = await rootBundle.loadString('database/productos/$usuario_cedula.json');
+  String jsonString = await rootBundle.loadString('assets/database/productos/$usuario_cedula.json');
   List<dynamic> productosJson = json.decode(jsonString);
 
   for (dynamic element in productosJson) {

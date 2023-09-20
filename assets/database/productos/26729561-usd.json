@@ -5,7 +5,7 @@
     "producto": "Tinitón",
     "unidadesPorPaquete": 6,
     "precioCompra": 0.26,
-    "precioVenta": 0.38,
+    "precioVenta": 0.37,
     "sabores": [
       "Mantecado y Chocolate",
       "Mantecado y Fresa",
@@ -19,7 +19,7 @@
     "producto": "Sorbete",
     "unidadesPorPaquete": 6,
     "precioCompra": 0.30,
-    "precioVenta": 0.38,
+    "precioVenta": 0.43,
     "sabores": [
       "Mango",
       "Parchita",
@@ -33,7 +33,7 @@
     "producto": "Batiboom",
     "unidadesPorPaquete": 8,
     "precioCompra": 0.25,
-    "precioVenta": 0.38,
+    "precioVenta": 0.36,
     "sabores": [
       "Uva",
       "Uva y fresa",
@@ -46,7 +46,7 @@
     "producto": "Barquilla",
     "unidadesPorPaquete": 5,
     "precioCompra": 0.37,
-    "precioVenta": 0.46,
+    "precioVenta": 0.53,
     "sabores": [
       "Mantecado",
       "Fresa",
@@ -58,8 +58,35 @@
     "tipo": "",
     "producto": "Swing",
     "unidadesPorPaquete": 6,
-    "precioCompra": 0.35,
-    "precioVenta": 0.46,
+    "precioCompra": 0.37,
+    "precioVenta": 0.53,
+    "sabores": []
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "Clasico",
+    "producto": "Zoek",
+    "unidadesPorPaquete": 5,
+    "precioCompra": 0.36,
+    "precioVenta": 0.51,
+    "sabores": []
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "Crocante",
+    "producto": "Zoek",
+    "unidadesPorPaquete": 5,
+    "precioCompra": 0.40,
+    "precioVenta": 0.57,
+    "sabores": []
+  },
+  {
+    "categoria": "Impulso",
+    "tipo": "",
+    "producto": "Peppi",
+    "unidadesPorPaquete": 5,
+    "precioCompra": 0.36,
+    "precioVenta": 0.51,
     "sabores": []
   },
   {
@@ -68,7 +95,7 @@
     "producto": "Sundae",
     "unidadesPorPaquete": 6,
     "precioCompra": 0.30,
-    "precioVenta": 0.42,
+    "precioVenta": 0.43,
     "sabores": [
       "Sundae de Chocolate",
       "Sundae de Fresa",
@@ -81,25 +108,7 @@
     "producto": "Doble Chocolate",
     "unidadesPorPaquete": 6,
     "precioCompra": 0.32,
-    "precioVenta": 0.42,
-    "sabores": []
-  },
-  {
-    "categoria": "Impulso",
-    "tipo": "Clasico",
-    "producto": "Zoek",
-    "unidadesPorPaquete": 5,
-    "precioCompra": 0.36,
-    "precioVenta": 0.48,
-    "sabores": []
-  },
-  {
-    "categoria": "Impulso",
-    "tipo": "Crocante",
-    "producto": "Zoek",
-    "unidadesPorPaquete": 5,
-    "precioCompra": 0.40,
-    "precioVenta": 0.48,
+    "precioVenta": 0.45,
     "sabores": []
   },
   {
@@ -107,10 +116,11 @@
     "tipo": "Clasico",
     "producto": "Medio Litro",
     "unidadesPorPaquete": 1,
-    "precioCompra": 1.2,
-    "precioVenta": 1.5,
+    "precioCompra": 1.25,
+    "precioVenta": 1.79,
     "sabores": [
       "Mantecado",
+      "Chocolate",
       "Fresa",
       "Mantecado y Chocolate",
       "Mantecado y Fresa",
@@ -123,14 +133,13 @@
     "tipo": "Premium",
     "producto": "Medio Litro",
     "unidadesPorPaquete": 1,
-    "precioCompra": 1.4,
-    "precioVenta": 1.8,
+    "precioCompra": 1.45,
+    "precioVenta": 2.07,
     "sabores": [
-      "Chocolate",
       "Galleta de Chocolate",
-      "Brownie",
+      "Ron con Pasas",
       "Torta Suiza",
-      "Ron con Pasas"
+      "Brownie"
     ]
   },
   {
@@ -138,9 +147,10 @@
     "tipo": "Clasico",
     "producto": "Litro",
     "unidadesPorPaquete": 1,
-    "precioCompra": 2.0,
-    "precioVenta": 2.5,
+    "precioCompra": 2.10,
+    "precioVenta": 2.99,
     "sabores": [
+      "Chocolate",
       "Mantecado",
       "Fresa",
       "Mantecado y Chocolate",
@@ -154,24 +164,23 @@
     "tipo": "Premium",
     "producto": "Litro",
     "unidadesPorPaquete": 1,
-    "precioCompra": 2.3,
-    "precioVenta": 2.9,
+    "precioCompra": 2.4,
+    "precioVenta": 3.41,
     "sabores": [
-      "Chocolate",
-      "Choco Brownie",
-      "Café",
+      "Choco. Sirop Choco.",
+      "Fresa con Sirope de Fresa",
+      "Sundae de Chocolate",
+      "Sundae de Naranja",
+      "Sundae de Fresa",
       "Galleta de Chocolate",
+      "Dulce de Leche",
+      "Ron con Pasas",
+      "Choco Brownie",
+      "Stracciatella",
+      "Torta Suiza",
       "Brownie",
       "Coco",
-      "Torta Suiza",
-      "Ron con Pasas",
-      "Stracciatella",
-      "Dulce de Leche",
-      "Sundae de Fresa",
-      "Sundae de Naranja",
-      "Fresa con Sirope de Fresa",
-      "Chocolate con Sirop Chocolate",
-      "Sundae de Chocolate"
+      "Café"
     ]
   },
   {
@@ -179,8 +188,8 @@
     "tipo": "Napolitano",
     "producto": "Napolitano",
     "unidadesPorPaquete": 1,
-    "precioCompra": 4.4,
-    "precioVenta": 5.5,
+    "precioCompra": 4.40,
+    "precioVenta": 6.25,
     "sabores": []
   },
   {
@@ -189,7 +198,7 @@
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
     "precioCompra": 6.75,
-    "precioVenta": 9.0,
+    "precioVenta": 9.56,
     "sabores": [
       "Mantecado",
       "Fresa",
@@ -197,8 +206,7 @@
       "Uva",
       "Frambuesa",
       "Chicle",
-      "Limón",
-      "Parchita"
+      "Limón"
     ]
   },
   {
@@ -207,15 +215,14 @@
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
     "precioCompra": 7.4,
-    "precioVenta": 10.0,
+    "precioVenta": 10.5,
     "sabores": [
       "Chocolate",
-      "Coco",
+      "Mantechip",
       "Torta Suiza",
-      "Ron con Frutas",
       "Sundae de Chocolate",
       "Sundae de Naranja",
-      "Chocolate con Sirop Chocolate",
+      "Ron con Frutas",
       "Tornado"
     ]
   },
@@ -225,16 +232,36 @@
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
     "precioCompra": 7.9,
-    "precioVenta": 10.5,
+    "precioVenta": 11.24,
     "sabores": [
-      "Mantechip",
-      "Chocochip",
-      "Chocomani",
-      "Galleta de Chocolate",
+      "Coco",
       "Sundae de Fresa",
       "Fresa con Sirope de Fresa",
+      "Chocochip",
+      "Maní",
       "Café",
-      "Maní"
+      "Parchita",
+      "Chocolate con Sirop de Chocolate",
+      "Mantechip",
+      "Chocomani",
+      "Galleta de Chocolate"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "Especiales",
+    "producto": "4.4 Litros",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 8.75,
+    "precioVenta": 12.39,
+    "sabores": [
+      "Ron con Pasas",
+      "Chocomani",
+      "Galleta de Chocolate",
+      "Brownie",
+      "Stracciatella",
+      "Dulce de Leche",
+      "Yogurt de Fresa"
     ]
   },
   {
@@ -242,14 +269,24 @@
     "tipo": "Super",
     "producto": "4.4 Litros",
     "unidadesPorPaquete": 1,
-    "precioCompra": 8.75,
-    "precioVenta": 11.5,
+    "precioCompra": 10.20,
+    "precioVenta": 14.49,
     "sabores": [
-      "Stracciatella",
-      "Brownie",
-      "Choco Brownie",
-      "Ron con Pasas",
-      "Dulce de Leche"
+      "Chocobrownie",
+      "Sorbete de Parchita",
+      "Sorbete de Guanábana",
+      "Sorbete de Mango"
+    ]
+  },
+  {
+    "categoria": "Recipientes",
+    "tipo": "S.E.E.",
+    "producto": "4.4 Litros",
+    "unidadesPorPaquete": 1,
+    "precioCompra": 12.80,
+    "precioVenta": 18.17,
+    "sabores": [
+      "Pistacho"
     ]
   },
   {
@@ -266,8 +303,8 @@
     "tipo": "",
     "producto": "Afiche Publicitario",
     "unidadesPorPaquete": 1,
-    "precioCompra": 0,
-    "precioVenta": 0,
+    "precioCompra": 0.0,
+    "precioVenta": 0.0,
     "sabores": []
   },
   {
@@ -275,8 +312,8 @@
     "tipo": "",
     "producto": "Envase 4.4L",
     "unidadesPorPaquete": 1,
-    "precioCompra": 3,
-    "precioVenta": 3,
+    "precioCompra": 3.0,
+    "precioVenta": 3.0,
     "sabores": []
   },
   {
@@ -284,8 +321,8 @@
     "tipo": "",
     "producto": "Bolso Térmico",
     "unidadesPorPaquete": 1,
-    "precioCompra": 12,
-    "precioVenta": 15,
+    "precioCompra": 12.0,
+    "precioVenta": 15.0,
     "sabores": []
   },
   {
@@ -294,7 +331,7 @@
     "producto": "Sirope",
     "unidadesPorPaquete": 1,
     "precioCompra": 2.45,
-    "precioVenta": 4,
+    "precioVenta": 4.0,
     "sabores": []
   },
   {
@@ -303,7 +340,7 @@
     "producto": "Sirope",
     "unidadesPorPaquete": 1,
     "precioCompra": 2.45,
-    "precioVenta": 4,
+    "precioVenta": 4.0,
     "sabores": []
   },
   {
@@ -311,8 +348,8 @@
     "tipo": "Dulce de Leche",
     "producto": "Sirope",
     "unidadesPorPaquete": 1,
-    "precioCompra": 6,
-    "precioVenta": 8,
+    "precioCompra": 6.0,
+    "precioVenta": 8.0,
     "sabores": []
   },
   {
@@ -320,8 +357,8 @@
     "tipo": "Capita Magica",
     "producto": "Sirope",
     "unidadesPorPaquete": 1,
-    "precioCompra": 9,
-    "precioVenta": 12,
+    "precioCompra": 9.0,
+    "precioVenta": 12.0,
     "sabores": []
   },
   {
@@ -329,8 +366,8 @@
     "tipo": "",
     "producto": "Galleta de Barquilla Tradicional",
     "unidadesPorPaquete": 1,
-    "precioCompra": 5,
-    "precioVenta": 6,
+    "precioCompra": 5.0,
+    "precioVenta": 6.0,
     "sabores": []
   },
   {

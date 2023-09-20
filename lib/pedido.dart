@@ -139,7 +139,7 @@ class PedidoState extends State<Pedido> {
                     
                                 const Spacer(),
                     
-                                Image.asset('img/logo.png', height: MediaQuery.of(context).size.width / 5, filterQuality: FilterQuality.medium),
+                                Image.asset('assets/img/logo.png', height: MediaQuery.of(context).size.width / 5, filterQuality: FilterQuality.medium),
                               ],
                             ),
                     

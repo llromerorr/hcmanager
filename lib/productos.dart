@@ -4,6 +4,8 @@ import 'package:pedidos/globals.dart' as globals;
 import 'package:pedidos/types/entrada.dart';
 import 'package:pedidos/types/producto.dart';
 
+import 'widgets/snackbar_producto_agregado.dart';
+
 class Productos extends StatefulWidget {
   const Productos({super.key});
 
@@ -199,8 +201,17 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                                       decoration: const InputDecoration(labelText: 'Cantidad'),
                                       onFieldSubmitted: (value) {
                                         agregarProductoAlPedido(productosEnCategoria[index], int.parse(cantidadController.text), i);
+                                        
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          snackbarProductoAgregado(
+                                            producto: productosEnCategoria[index].producto,
+                                            cantidad: cantidadController.text,
+                                            sabor: productosEnCategoria[index].sabores[i],
+                                          )
+                                        );
+
                                         cantidadController.clear();
-                                        Navigator.of(context).pop();
+                                        // Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         setState(() {}); // Actualizar la lista de pedidos
@@ -209,8 +220,16 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                                     ElevatedButton(
                                       onPressed: () {
                                         agregarProductoAlPedido(productosEnCategoria[index], int.parse(cantidadController.text), i);
+                                        
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          snackbarProductoAgregado(
+                                            producto: productosEnCategoria[index].producto,
+                                            cantidad: cantidadController.text,
+                                            sabor: productosEnCategoria[index].sabores[i],
+                                          )
+                                        );
                                         cantidadController.clear();
-                                        Navigator.of(context).pop();
+                                        // Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         setState(() {}); // Actualizar la lista de pedidos
@@ -257,8 +276,16 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                         decoration: const InputDecoration(labelText: 'Cantidad'),
                         onFieldSubmitted: (value) {
                           agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(cantidadController.text));
+                          
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            snackbarProductoAgregado(
+                              producto: productosEnCategoria[index].producto,
+                              cantidad: cantidadController.text,
+                              sabor: "",
+                            )
+                          );
+                          
                           cantidadController.clear();
-                          Navigator.of(context).pop();
                           Navigator.of(context).pop();
                           setState(() {}); // Actualizar la lista de pedidos
                         }),
@@ -266,8 +293,16 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                       ElevatedButton(
                         onPressed: () {
                           agregarProductoSinSaborAlPedido(productosEnCategoria[index], int.parse(cantidadController.text));
+                          
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            snackbarProductoAgregado(
+                              producto: productosEnCategoria[index].producto,
+                              cantidad: cantidadController.text,
+                              sabor: "",
+                            )
+                          );
+                          
                           cantidadController.clear();
-                          Navigator.of(context).pop();
                           Navigator.of(context).pop();
                           setState(() {}); // Actualizar la lista de pedidos
                         },
