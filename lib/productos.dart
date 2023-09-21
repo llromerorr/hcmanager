@@ -212,7 +212,7 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
 
                                         cantidadController.clear();
                                         // Navigator.of(context).pop();
-                                        Navigator.of(context).pop();
+                                        // Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         setState(() {}); // Actualizar la lista de pedidos
                                       }),
@@ -230,7 +230,7 @@ class ProductosState extends State<Productos> with SingleTickerProviderStateMixi
                                         );
                                         cantidadController.clear();
                                         // Navigator.of(context).pop();
-                                        Navigator.of(context).pop();
+                                        // Navigator.of(context).pop();
                                         Navigator.of(context).pop();
                                         setState(() {}); // Actualizar la lista de pedidos
                                       },
