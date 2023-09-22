@@ -304,8 +304,8 @@
     "tipo": "",
     "producto": "Afiche Publicitario",
     "unidadesPorPaquete": 1,
-    "precioCompra": 0.0,
-    "precioVenta": 0.0,
+    "precioCompra": 0.50,
+    "precioVenta": 0.50,
     "sabores": []
   },
   {
